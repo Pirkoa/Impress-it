@@ -1,0 +1,6 @@
+# Impress-it
+Print strings in C#
+
+Work in progress...
+
+Works with long lines and multi-pages...
