@@ -12,11 +12,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
+        public const bool DEBUG = false;
         private string stringToPrint;
         private String path;
-        public Form1()
+        private String printer;
+        public Main()
         {
             InitializeComponent();
         }
@@ -37,6 +39,13 @@ namespace WindowsFormsApplication1
             {
                 stringToPrint = reader.ReadToEnd();
             }
+        }
+
+        private void SetSettings()
+        {
+            if(DEBUG)
+                MessageBox.Show(printer);
+            docToPrint.PrinterSettings.PrinterName = printer;
         }
 
         private void docToPrint_PrintPage(object sender, PrintPageEventArgs e)
@@ -65,9 +74,15 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                ReadFile();
-                docToPrint.Print();
-                File.Delete(path);
+                PrinterChoice choice = new PrinterChoice();
+                if (choice.ShowDialog() == DialogResult.OK)
+                {
+                    printer = choice.printer;
+                    ReadFile();
+                    SetSettings();
+                    docToPrint.Print();
+                    File.Delete(path);
+                }
             }
             catch(Exception ex)
             {
