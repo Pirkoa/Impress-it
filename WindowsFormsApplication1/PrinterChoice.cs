@@ -40,11 +40,5 @@ namespace WindowsFormsApplication1
             }
             this.Close();
         }
-
-        private void cbPrinters_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(Main.DEBUG)
-                MessageBox.Show(cbPrinters.SelectedItem.ToString());
-        }
     }
 }

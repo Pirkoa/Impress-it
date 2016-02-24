@@ -44,12 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Impress.cs" />
     <Compile Include="PrinterChoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,9 +53,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PrinterChoice.resx">
       <DependentUpon>PrinterChoice.cs</DependentUpon>
     </EmbeddedResource>

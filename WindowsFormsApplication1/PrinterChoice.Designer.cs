@@ -41,7 +41,6 @@
             this.cbPrinters.Name = "cbPrinters";
             this.cbPrinters.Size = new System.Drawing.Size(149, 21);
             this.cbPrinters.TabIndex = 0;
-            this.cbPrinters.SelectedIndexChanged += new System.EventHandler(this.cbPrinters_SelectedIndexChanged);
             // 
             // label1
             // 
