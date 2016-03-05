@@ -7,3 +7,17 @@ C:\Users\Dussert Cyril\Desktop\Impress-it\WindowsFormsApplication1\obj\Debug\Win
 C:\Users\Dussert Cyril\Desktop\Impress-it\WindowsFormsApplication1\obj\Debug\Impress it.csproj.GenerateResource.Cache
 C:\Users\Dussert Cyril\Desktop\Impress-it\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Dussert Cyril\Desktop\Impress-it\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\bin\Debug\Impress it.exe.config
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\bin\Debug\Impress it.exe.manifest
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\bin\Debug\Impress it.application
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\bin\Debug\Impress it.exe
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\bin\Debug\Impress it.pdb
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.csprojResolveAssemblyReference.cache
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.PrinterChoice.resources
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress_it.Properties.Resources.resources
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.csproj.GenerateResource.Cache
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.TrustInfo.xml
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.exe.manifest
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.application
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.exe
+C:\Users\dussercy\Desktop\Impress-it-master\Impress-it-master\WindowsFormsApplication1\obj\Debug\Impress it.pdb

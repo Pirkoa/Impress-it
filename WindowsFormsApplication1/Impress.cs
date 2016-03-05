@@ -12,7 +12,13 @@ namespace WindowsFormsApplication1
 {
     class Impress
     {
+        /// <summary>
+        /// Déclaration des variables
+        /// </summary>
         public const bool DEBUG = true;
+        /// <summary>
+        /// Chaine de texte qui sera imprimée
+        /// </summary>
         public String text { get; set; }
         private String docName { get; set; }
         private String docPath { get; set; }
@@ -23,6 +29,10 @@ namespace WindowsFormsApplication1
 
         public Font Font { get; set; }
 
+        /// <summary>
+        /// Constructeur le plus simple
+        /// </summary>
+        /// <param name="text">Chaine de texte qui sera imprimée</param>
         public Impress(string text)
         {
             this.text = text;
@@ -30,29 +40,40 @@ namespace WindowsFormsApplication1
             docToPrint.PrintPage += docToPrint_PrintPage;
             this.Font = new Font("Arial", 10);
         }
-
-        void docToPrint_PrintPage(object sender, PrintPageEventArgs e)
+        /// <summary>
+        /// Constructeur avec choix de la police d'impression
+        /// </summary>
+        /// <param name="text">Chine de texte qui sera imprimée</param>
+        /// <param name="font">Paramètres de police d'impression</param>
+        public Impress(string text, Font font)
+        {
+            this.text = text;
+            this.docToPrint = new PrintDocument();
+            docToPrint.PrintPage += docToPrint_PrintPage;
+            this.Font = font;
+        }
+        /// <summary>
+        /// Evènement appelé lors du déclenchement de l'impression
+        /// </summary>
+        private void docToPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
             int charactersOnPage = 0;
             int linesPerPage = 0;
 
-            // Sets the value of charactersOnPage to the number of characters 
-            // of stringToPrint that will fit within the bounds of the page.
             e.Graphics.MeasureString(stringToPrint, this.Font,
                 e.MarginBounds.Size, StringFormat.GenericTypographic,
                 out charactersOnPage, out linesPerPage);
 
-            // Draws the string within the bounds of the page
             e.Graphics.DrawString(stringToPrint, this.Font, Brushes.Black,
                 e.MarginBounds, StringFormat.GenericTypographic);
 
-            // Remove the portion of the string that has been printed.
             stringToPrint = stringToPrint.Substring(charactersOnPage);
 
-            // Check to see if more pages are to be printed.
             e.HasMorePages = (stringToPrint.Length > 0);
         }
-
+        /// <summary>
+        /// Transformation de la chaine de texte en fichier texte temporaire, puis lecture du fichier pour impression
+        /// </summary>
         private void ReadFile()
         {
             string docName = "TEMPORARY.txt";
@@ -70,14 +91,18 @@ namespace WindowsFormsApplication1
                 stringToPrint = reader.ReadToEnd();
             }
         }
-
+        /// <summary>
+        /// Paramètres d'impression, bientôt plus ici ;)s
+        /// </summary>
         private void SetSettings()
         {
             if (DEBUG)
                 MessageBox.Show(printer);
             docToPrint.PrinterSettings.PrinterName = printer;
         }
-
+        /// <summary>
+        /// Méthode à appeler pour lancer l'impression
+        /// </summary>
         public void Start()
         {
             try
